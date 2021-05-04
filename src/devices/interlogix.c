@@ -116,7 +116,7 @@ static int interlogix_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
     // Check if the message length is between the length seen in test files (59)
     // and the 64 bits discussed above.
-    if (bitbuffer->bits_per_row[0] < 59
+    if (bitbuffer->bits_per_row[0] < 57
         || bitbuffer->bits_per_row[0] > 64) {
         return DECODE_ABORT_LENGTH;
     }
